@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ceab2038dd90b64568a68caa8555c0bd",
+    "packages": [
+        {
+            "name": "obray/obray",
+            "version": "dev-merx",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nateobray/obray.git",
+                "reference": "fb86a8b48047f3f7be1d207ddf6b4fb9610fd910"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nateobray/obray/zipball/fb86a8b48047f3f7be1d207ddf6b4fb9610fd910",
+                "reference": "fb86a8b48047f3f7be1d207ddf6b4fb9610fd910",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "obray\\": "core"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP framework for websites and applications.",
+            "homepage": "http://www.obray.net",
+            "time": "2022-03-18T00:01:07+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "obray/obray": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.3"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

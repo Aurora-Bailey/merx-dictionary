@@ -1,0 +1,14 @@
+{
+    "name": "merx-solutions/dictionary",
+    "description": "Basic test application.",
+    "homepage": "http://merxsolutions.com",
+    "require": {
+        "php": "^7.3",
+        "obray/obray": "dev-merx"
+    },
+    "autoload": {
+        "psr-4": {
+            "dictionary\\" : "src/"
+        }
+    }
+}
