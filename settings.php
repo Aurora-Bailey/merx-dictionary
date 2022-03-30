@@ -8,8 +8,8 @@ date_default_timezone_set(__APP_TIMEZONE__);
 
 define('__OBRAY_DATABASE_HOST__', 'merx.cluster-c6wvc3qesd6h.us-west-2.rds.amazonaws.com');
 define('__OBRAY_DATABASE_PORT__', '3306');
-define('__OBRAY_DATABASE_USERNAME__', 'admin');
-define('__OBRAY_DATABASE_PASSWORD__', 'nyvvaw-batmun-dytcU6');
+define('__OBRAY_DATABASE_USERNAME__', 'aurora');
+define('__OBRAY_DATABASE_PASSWORD__', 'SpoOp7h7ZEvtlBcQoPD9kUTlxo78vh8');
 define('__OBRAY_DATABASE_NAME__', 'dictionary-aurora');
 define('__OBRAY_DATABASE_ENGINE__','InnoDB');
 define('__OBRAY_DATABASE_CHARACTER_SET__','utf8mb4');
