@@ -35,7 +35,7 @@ Add Word (button)
 
 # How to use the Obray Framework
 
-Take a look at this wiki on the framwork to get you started: 
+Take a look at this wiki on the framwork to get you started: https://github.com/Merx-Solutions/dictionary/wiki/Obray-Framework
 
 You will find in the repo an oExample.php model.  You can use it to script the table to the database and use it's add, update, get, and delete functions as examples on how to work with ODBO.  To do this open up the VS code terminal and do this on the command line:
 ```
