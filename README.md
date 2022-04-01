@@ -109,3 +109,5 @@ This should create a table that looks like the following:
 There is an example of how this table component works in the repo, so give it a test and make sure you understand how it works.
 
 At some point you will also need to make requests to the server to add words or definitions, delete them, etc.  To do this use the javascript fetch API.  You can find documentation for it here: [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+Test
