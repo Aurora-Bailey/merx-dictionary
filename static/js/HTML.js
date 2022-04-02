@@ -20,8 +20,9 @@ export class HTML
                     }
                     break;
                 case 'string':
-                    this.text = document.createTextNode(parameters[key])
-                    this.el.appendChild(this.text)
+                    this.el.innerHTML = parameters[key]
+                    //this.text = document.createTextNode()
+                    //this.el.appendChild(this.text)
                     break;
             }
         }
