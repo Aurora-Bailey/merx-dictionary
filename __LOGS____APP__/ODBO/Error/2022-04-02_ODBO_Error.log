@@ -1,0 +1,130 @@
+2022-04-02 11:54:39 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'oDictionaryWord.word_text' in 'field list'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(627): execute()
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): get(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('get', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/get', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/get', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oWord/get', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oWord/get', Array, true)
+
+
+2022-04-02 11:56:06 SQLSTATE[42000]: Syntax error or access violation: 1142 REFERENCES command denied to user 'aurora'@'10.1.19.255' for table 'oDictionaryWord'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(245): query('CREATE TABLE IF NOT EXISTS oDictionaryWord (
+
+	def_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	word_id int(11) unsigned ,
+	def_text TEXT COLLATE utf8_general_ci ,
+
+	OCDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OCU INT(11) UNSIGNED,
+	OMDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OMU INT(11) UNSIGNED,
+
+PRIMARY KEY (def_id) ,
+CONSTRAINT `fba991168e81a967bc1734a77c4e581944acd2b88fad03e271cfd0508abf88b3` FOREIGN KEY (`word_id`) REFERENCES `oDictionaryWord` (`word_id`) ON DELETE CASCADE ON UPDATE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ')
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): scriptTable(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('scriptTable', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/scriptTable', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/scriptTable', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oDefinition/scriptTable', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oDefinition/scriptTable', Array, true)
+
+
+2022-04-02 11:57:19 SQLSTATE[42000]: Syntax error or access violation: 1142 REFERENCES command denied to user 'aurora'@'10.1.16.246' for table 'oWord'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(245): query('CREATE TABLE IF NOT EXISTS oDefinition (
+
+	def_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	word_id int(11) unsigned ,
+	def_text TEXT COLLATE utf8_general_ci ,
+
+	OCDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OCU INT(11) UNSIGNED,
+	OMDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OMU INT(11) UNSIGNED,
+
+PRIMARY KEY (def_id) ,
+CONSTRAINT `dfebc1cd8af8eb63410d15d7df722c65f0f8b29b25b7a5e15fee3886a7978deb` FOREIGN KEY (`word_id`) REFERENCES `oWord` (`word_id`) ON DELETE CASCADE ON UPDATE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ')
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): scriptTable(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('scriptTable', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/scriptTable', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/scriptTable', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oDefinition/scriptTable', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oDefinition/scriptTable', Array, true)
+
+
+2022-04-02 11:57:39 SQLSTATE[42000]: Syntax error or access violation: 1142 REFERENCES command denied to user 'aurora'@'10.1.16.246' for table 'oWord'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(245): query('CREATE TABLE IF NOT EXISTS oDefinition (
+
+	def_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	word_id int(11) unsigned ,
+	def_text TEXT COLLATE utf8_general_ci ,
+
+	OCDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OCU INT(11) UNSIGNED,
+	OMDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OMU INT(11) UNSIGNED,
+
+PRIMARY KEY (def_id) ,
+CONSTRAINT `dfebc1cd8af8eb63410d15d7df722c65f0f8b29b25b7a5e15fee3886a7978deb` FOREIGN KEY (`word_id`) REFERENCES `oWord` (`word_id`) ON DELETE CASCADE ON UPDATE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ')
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): scriptTable(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('scriptTable', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/scriptTable', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/scriptTable', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oDefinition/scriptTable', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oDefinition/scriptTable', Array, true)
+
+
+2022-04-02 12:30:39 SQLSTATE[42000]: Syntax error or access violation: 1142 REFERENCES command denied to user 'aurora'@'10.1.22.148' for table 'oWord'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(245): query('CREATE TABLE IF NOT EXISTS oDefinition (
+
+	def_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	word_id int(11) unsigned ,
+	def_text TEXT COLLATE utf8_general_ci ,
+
+	OCDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OCU INT(11) UNSIGNED,
+	OMDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OMU INT(11) UNSIGNED,
+
+PRIMARY KEY (def_id) ,
+CONSTRAINT `dfebc1cd8af8eb63410d15d7df722c65f0f8b29b25b7a5e15fee3886a7978deb` FOREIGN KEY (`word_id`) REFERENCES `oWord` (`word_id`) ON DELETE CASCADE ON UPDATE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ')
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): scriptTable(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('scriptTable', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/scriptTable', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/scriptTable', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oDefinition/scriptTable', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oDefinition/scriptTable', Array, true)
+
+
+2022-04-02 02:43:45 SQLSTATE[42000]: Syntax error or access violation: 1142 REFERENCES command denied to user 'aurora'@'10.1.16.246' for table 'oWord'
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(245): query('CREATE TABLE IF NOT EXISTS oDefinition (
+
+	def_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	word_id int(11) unsigned ,
+	def_text TEXT COLLATE utf8_general_ci ,
+
+	OCDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OCU INT(11) UNSIGNED,
+	OMDT DATETIME DEFAULT CURRENT_TIMESTAMP,
+	OMU INT(11) UNSIGNED,
+
+PRIMARY KEY (def_id) ,
+CONSTRAINT `dfebc1cd8af8eb63410d15d7df722c65f0f8b29b25b7a5e15fee3886a7978deb` FOREIGN KEY (`word_id`) REFERENCES `oWord` (`word_id`) ON DELETE CASCADE ON UPDATE CASCADE
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; ')
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): scriptTable(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('scriptTable', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/scriptTable', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/scriptTable', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/m/oDefinition/scriptTable', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/m/oDefinition/scriptTable', Array, true)
+
+

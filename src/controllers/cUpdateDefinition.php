@@ -1,7 +1,7 @@
 <?php
 namespace dictionary\controllers;
 
-class cGetAllWords extends \ODBO
+class cUpdateDefinition extends \ODBO
 {
     protected $permissions = [
         'object' => 'any',
@@ -12,9 +12,7 @@ class cGetAllWords extends \ODBO
     {
         ob_start();
         header('Content-Type: application/json; charset=utf-8');
-
-        echo json_encode($this->route('/m/oDictionaryWord/get/')->data);
-        
+        echo json_encode($this->route('/d/dUpdateDefinition')->customQuery($params));
         $output = ob_get_clean();
         echo $output;
         exit();

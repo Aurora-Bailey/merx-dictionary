@@ -1,7 +1,7 @@
 <?php
 namespace dictionary\controllers;
 
-class cGetWordById extends \ODBO
+class cAddDefinition extends \ODBO
 {
     protected $permissions = [
         'object' => 'any',
@@ -12,13 +12,7 @@ class cGetWordById extends \ODBO
     {
         ob_start();
         header('Content-Type: application/json; charset=utf-8');
-
-        if(empty($params['word_id'])) throw new \Exception("word_id value is required.");
-
-        echo json_encode($this->route('/m/oDictionaryWord/get/', [
-            'word_id' => $params['word_id']
-        ])->data);
-        
+        echo json_encode($this->route('/d/dAddDefinition')->customQuery($params));
         $output = ob_get_clean();
         echo $output;
         exit();

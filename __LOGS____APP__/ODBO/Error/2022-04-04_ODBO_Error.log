@@ -1,0 +1,36 @@
+2022-04-04 01:39:59 SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dictionary-aurora.oDefinition' doesn't exist
+#0 /srv/www/dictionary/vendor/obray/obray/core/ODBO.php(627): execute()
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): get(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('get', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/get', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/get', '/srv/www/dictionary/models/', Array, true)
+#5 /srv/www/dictionary/src/data/dGetAllWordsWithDefinitions.php(8): route('/m/oDefinition/get/')
+#6 /srv/www/dictionary/src/controllers/cGetAllWordsWithDefinitions.php(15): customQuery(Array)
+#7 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#8 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, false, Array)
+#9 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, false)
+#10 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '', Array, false)
+#11 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/GetAllWordsWithDefinitions', Array, false)
+#12 /srv/www/dictionary/obray.php(18): route('/GetAllWordsWithDefinitions')
+
+
+2022-04-04 01:40:57 word_id value is required.
+#0 /srv/www/dictionary/src/controllers/cAddDefinition.php(15): customQuery(Array)
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, false, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, false)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '', Array, false)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/AddDefinition?word_id=0&def_text=fruit', Array, false)
+#6 /srv/www/dictionary/obray.php(18): route('/AddDefinition?word_id=0&def_text=fruit')
+
+
+2022-04-04 01:41:51 word_id value is required.
+#0 /srv/www/dictionary/src/controllers/cAddDefinition.php(15): customQuery(Array)
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, false, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, false)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '', Array, false)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/AddDefinition?word_id=0&def_text=fruit', Array, false)
+#6 /srv/www/dictionary/obray.php(18): route('/AddDefinition?word_id=0&def_text=fruit')
+
+

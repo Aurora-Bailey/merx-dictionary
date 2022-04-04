@@ -12,17 +12,7 @@ class cUpdateWord extends \ODBO
     {
         ob_start();
         header('Content-Type: application/json; charset=utf-8');
-
-        if(empty($params['word_id'])) throw new \Exception("word_id value is required.");
-        if(empty($params['word_name'])) throw new \Exception("word_name value is required.");
-        if(empty($params['word_definition'])) throw new \Exception("word_definition value is required.");
-
-        echo json_encode($this->route('/m/oDictionaryWord/update/', [
-            'word_id' => $params['word_id'],
-            'word_name' => $params['word_name'],
-            'word_definition' => $params['word_definition']
-        ])->getFirst());
-
+        echo json_encode($this->route('/d/dUpdateWord')->customQuery($params));
         $output = ob_get_clean();
         echo $output;
         exit();

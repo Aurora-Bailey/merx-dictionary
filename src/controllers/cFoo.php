@@ -11,9 +11,8 @@ class cFoo extends \ODBO
     public function index($params=[])
     {
         ob_start();
-        // header('Content-Type: application/json; charset=utf-8');
-        // echo json_encode(['test' => 1]);
-        echo json_encode($this->route('/d/dFoo/index')->index());
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($this->route('/d/dFoo')->index());
         $output = ob_get_clean();
         echo $output;
         exit();
