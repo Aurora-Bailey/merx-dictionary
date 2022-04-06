@@ -10,11 +10,12 @@ class cUpdateWord extends \ODBO
 
     public function index($params=[])
     {
-        ob_start();
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($this->route('/d/dUpdateWord')->customQuery($params));
-        $output = ob_get_clean();
-        echo $output;
-        exit();
+        $this->route('/d/dUpdateWord')->customQuery($params);
+        // ob_start();
+        // header('Content-Type: application/json; charset=utf-8');
+        // echo json_encode($this->route('/d/dUpdateWord')->customQuery($params));
+        // $output = ob_get_clean();
+        // echo $output;
+        // exit();
     }
 }

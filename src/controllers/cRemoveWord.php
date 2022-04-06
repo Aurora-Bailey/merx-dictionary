@@ -10,11 +10,12 @@ class cRemoveWord extends \ODBO
 
     public function index($params=[])
     {
-        ob_start();
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($this->route('/d/dRemoveWord')->customQuery($params));
-        $output = ob_get_clean();
-        echo $output;
-        exit();
+        $this->route('/d/dRemoveWord')->customQuery($params);
+        // ob_start();
+        // header('Content-Type: application/json; charset=utf-8');
+        // echo json_encode($this->route('/d/dRemoveWord')->customQuery($params));
+        // $output = ob_get_clean();
+        // echo $output;
+        // exit();
     }
 }
