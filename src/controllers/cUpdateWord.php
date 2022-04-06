@@ -10,7 +10,7 @@ class cUpdateWord extends \ODBO
 
     public function index($params=[])
     {
-        $this->route('/d/dUpdateWord')->customQuery($params);
+        $this->data = $this->route('/d/dUpdateWord')->customQuery($params);
         // ob_start();
         // header('Content-Type: application/json; charset=utf-8');
         // echo json_encode($this->route('/d/dUpdateWord')->customQuery($params));

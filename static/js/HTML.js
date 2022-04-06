@@ -5,6 +5,7 @@ export class HTML
         if(el == null) return this
         this.el = document.createElement(el);
         for (const key in parameters) {
+            
             switch(typeof parameters[key]) {
                 case 'object':
                     for (const property in parameters[key]) {

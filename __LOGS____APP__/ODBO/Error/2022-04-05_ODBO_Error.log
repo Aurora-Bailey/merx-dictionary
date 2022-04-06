@@ -1,0 +1,30 @@
+2022-04-05 09:04:21 word_text value is required.
+#0 /srv/www/dictionary/src/controllers/cAddWord.php(13): customQuery(Array)
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, false, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, false)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '', Array, false)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/AddWord', Array, false)
+#6 /srv/www/dictionary/obray.php(18): route('/AddWord')
+
+
+2022-04-05 09:07:51 word_text value is required.
+#0 /srv/www/dictionary/src/controllers/cAddWord.php(13): customQuery(Array)
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, false, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, false)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '', Array, false)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/AddWord', Array, false)
+#6 /srv/www/dictionary/obray.php(18): route('/AddWord')
+
+
+2022-04-05 09:16:31 word_text value is required.
+#0 /srv/www/dictionary/src/controllers/cAddWord.php(13): customQuery(Array)
+#1 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(560): index(Array)
+#2 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(348): executeMethod('index', Array, true, Array)
+#3 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(514): route('/index/', Array, true)
+#4 /srv/www/dictionary/vendor/obray/obray/core/OObject.php(355): createObject(Array, '/index/', '/srv/www/dictionary/data/', Array, true)
+#5 /srv/www/dictionary/vendor/obray/obray/core/ORouter.php(72): route('/d/AddWord/', Array, true)
+#6 /srv/www/dictionary/obray.php(16): route('/d/AddWord/', Array, true)
+
+

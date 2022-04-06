@@ -10,7 +10,7 @@ class cRemoveDefinition extends \ODBO
 
     public function index($params=[])
     {
-        $this->route('/d/dRemoveDefinition')->customQuery($params);
+        $this->data = $this->route('/d/dRemoveDefinition')->customQuery($params);
         // ob_start();
         // header('Content-Type: application/json; charset=utf-8');
         // echo json_encode($this->route('/d/dRemoveDefinition')->customQuery($params));

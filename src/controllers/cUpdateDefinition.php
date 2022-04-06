@@ -10,7 +10,7 @@ class cUpdateDefinition extends \ODBO
 
     public function index($params=[])
     {
-        $this->route('/d/dUpdateDefinition')->customQuery($params);
+        $this->data = $this->route('/d/dUpdateDefinition')->customQuery($params);
         // ob_start();
         // header('Content-Type: application/json; charset=utf-8');
         // echo json_encode($this->route('/d/dUpdateDefinition')->customQuery($params));

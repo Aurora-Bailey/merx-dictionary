@@ -7,10 +7,10 @@ class dAddWord extends \ODBO
     {
         if(empty($params['word_text'])) throw new \Exception("word_text value is required.");
 
-        $this->route('/m/oWord/add/', [
+        $d = $this->route('/m/oWord/add/', [
                 'word_text' => $params['word_text']
-        ]);
+        ])->getFirst();;
 
-        return $this->getFirst();
+        return $d;
     }
 }
