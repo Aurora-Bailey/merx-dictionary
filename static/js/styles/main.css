@@ -136,15 +136,25 @@ button:hover {
 }
 table {
     width: 100%;
+	color:rgb(59, 59, 59);
 }
 th {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 20px 20px;
-
 }
 tr:nth-child(even) {
-    background-color: rgb(228, 228, 228)
+    background-color: rgb(230, 230, 230)
 }
-td {
-    border: 1px solid rgb(189, 189, 189);
+tr:hover {
+	opacity: 0.8;
+}
+td, th {
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+td:nth-child(1) {
+	text-align: center;
+	border-right: 1px solid rgb(189, 189, 189);
+}
+.new-def {
+	border-top: 1px solid rgb(189, 189, 189);
 }

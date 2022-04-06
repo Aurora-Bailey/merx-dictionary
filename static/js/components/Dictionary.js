@@ -74,6 +74,7 @@ export class Dictionary extends HTML {
 
     async render () {
         await this.getAllWordsWithDefinitions()
+        // Build table with headers
         this.el.innerHTML = ''
         let table = new HTML('table').append(this.el)
         let tableHeader = new HTML('tr').append(table)
@@ -81,45 +82,50 @@ export class Dictionary extends HTML {
         thList.forEach(headerData => {
             let x = new HTML('th', headerData).append(tableHeader)
         })
+
+        // Add rows
         for (const key in this.words) {
+
+            // Build row
             let word = this.words[key]
-            let row = new HTML('tr').append(table)
+            let row = new HTML('tr', {class: "new-def"}).append(table)
             let name = new HTML('td', word['word_text']).append(row)
             let def = word['def_list'].shift()
             let definition = new HTML('td', '1. ' + def['def_text']).append(row)
             let action = new HTML('td').append(row)
 
+            // Add buttons to action element
             let edit = new HTML('button', 'Edit', {click: () => {
-                this.updateWord(word['word_id'], prompt('Update word...')).then(() => {
-                    this.updateDefinition(def['def_id'], prompt('Update definition...')).then(() => this.render())
+                this.updateWord(word['word_id'], prompt('Update word...', word['word_text'])).then(() => {
+                    this.updateDefinition(def['def_id'], prompt('Update definition...', def['def_text'])).then(() => this.render())
                 })
             }}).append(action)
-
+            let del = new HTML('button', 'Delete', {click: () => {
+                this.removeWord(word['word_id']).then(() => this.render())
+            }}).append(action)
             let addDef = new HTML('button', 'Add Definition', {click: () => {
                 this.addDefinition(word['word_id'], prompt('Enter another definition...')).then(response => {
                     this.render()
                 })
             }}).append(action)
 
-            let del = new HTML('button', 'Delete', {click: () => {
-                this.removeWord(word['word_id']).then(() => this.render())
-            }}).append(action)
-
+            // build row for secondary definitions
             word['def_list'].forEach((def, i) => {
                 let row = new HTML('tr').append(table)
                 let name = new HTML('td', '').append(row)
                 let definition = new HTML('td', (i + 2) + '. ' + def['def_text']).append(row)
                 let action = new HTML('td').append(row)
 
+                // Add buttons to action element
                 let edit = new HTML('button', 'Edit', {click: () => {
-                    this.updateDefinition(def['def_id'], prompt('Update definition...')).then(() => this.render())
+                    this.updateDefinition(def['def_id'], prompt('Update definition...', def['def_text'])).then(() => this.render())
                 }}).append(action)
-
                 let del = new HTML('button', 'Delete', {click: () => {
                     this.removeDefinition(def['def_id']).then(() => this.render())
                 }}).append(action)
             })
         }
+        // Add new word button
         let add = new HTML('button', 'Add Word', {click: () => {
             this.addWord(prompt('Enter a new word...')).then(response => {
                 this.addDefinition(response['data']['word_id'], prompt('Enter a new definition...')).then(response => {
